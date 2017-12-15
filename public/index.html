@@ -22,11 +22,11 @@
 
     <h2>Reviews</h2>
     <ul>
-      <li v-for="review in reviews">
+      <li v-for="review in reviews" v-on:click="deleteReview(review)" v-if="isGoodReview(review)">
         {{ review.rating }} STARS - {{ review.reviewer }}: {{ review.text }}
       </li>
     </ul>
-    <input type="text" v-model="reviews[2].text">
+    <!-- <input type="text" v-model="reviews[2].text"> -->
 
     <h4>Add a new review</h4>
     <form>

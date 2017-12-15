@@ -29,6 +29,17 @@ var HomePage = {
         this.newReviewRating = "";
         this.newReviewReviewer = "";
       }
+    },
+    deleteReview: function(inputReview) {
+      var index = this.reviews.indexOf(inputReview);
+      this.reviews.splice(index, 1);
+    },
+    isGoodReview: function(inputReview) {
+      if (inputReview.text.includes("bad")) {
+        return false;
+      } else {
+        return true;
+      }
     }
   },
   computed: {}
