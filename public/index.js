@@ -18,15 +18,17 @@ var HomePage = {
   mounted: function() {},
   methods: {
     addReview: function() {
-      var newReview = {
-        text: this.newReviewText,
-        rating: this.newReviewRating,
-        reviewer: this.newReviewReviewer
-      };
-      this.reviews.push(newReview);
-      this.newReviewText = "";
-      this.newReviewRating = "";
-      this.newReviewReviewer = "";
+      if (this.newReviewText) {
+        var newReview = {
+          text: this.newReviewText,
+          rating: this.newReviewRating,
+          reviewer: this.newReviewReviewer
+        };
+        this.reviews.push(newReview);
+        this.newReviewText = "";
+        this.newReviewRating = "";
+        this.newReviewReviewer = "";
+      }
     }
   },
   computed: {}
