@@ -24,6 +24,9 @@ var HomePage = {
         reviewer: this.newReviewReviewer
       };
       this.reviews.push(newReview);
+      this.newReviewText = "";
+      this.newReviewRating = "";
+      this.newReviewReviewer = "";
     }
   },
   computed: {}
