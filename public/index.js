@@ -10,24 +10,15 @@ var HomePage = {
         { text: "This is pretty okay!", rating: 3, reviewer: "Emily Post" },
         { text: "This is pretty bad!", rating: 1, reviewer: "Angela Pearson" }
       ],
-      newReviewText: "",
-      newReviewRating: "",
-      newReviewReviewer: ""
+      newReview: {}
     };
   },
   mounted: function() {},
   methods: {
     addReview: function() {
-      if (this.newReviewText) {
-        var newReview = {
-          text: this.newReviewText,
-          rating: this.newReviewRating,
-          reviewer: this.newReviewReviewer
-        };
-        this.reviews.push(newReview);
-        this.newReviewText = "";
-        this.newReviewRating = "";
-        this.newReviewReviewer = "";
+      if (this.newReview.text) {
+        this.reviews.push(this.newReview);
+        this.newReview = {};
       }
     },
     deleteReview: function(inputReview) {

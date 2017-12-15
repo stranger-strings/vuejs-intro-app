@@ -31,13 +31,13 @@
     <h4>Add a new review</h4>
     <form>
       <div>
-        Review text: <input type="text" v-model="newReviewText">
+        Review text: <input type="text" v-model="newReview.text">
       </div>
       <div>
-        Review rating: <input type="text" v-model="newReviewRating">
+        Review rating: <input type="text" v-model="newReview.rating">
       </div>
       <div>
-        Reviewer name: <input type="text" v-model="newReviewReviewer">
+        Reviewer name: <input type="text" v-model="newReview.reviewer">
       </div>
       <button v-on:click="addReview()">Add review</button>
     </form>
